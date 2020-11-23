@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Serial Device Firmware Upgrade &mdash; open source watch 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="Partitions" href="partitions.html" />
+    <link rel="prev" title="Firmware Over The Air (FOTA)" href="fota.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> open source watch
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content.html">Zephyr for the ds-d6    smartwatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Install zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uart.html">On the subject of UART</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blackmagicprobe.html">The black magic probe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicapplications.html">Starting with some basic applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bluetooth.html">bluetooth (BLE) example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../display.html">display (ssd1306)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lvgl.html">LittlevGL Basic Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../current-time.html">Current Time Service</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fota.html">Firmware Over The Air (FOTA)</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Serial Device Firmware Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wireless-device-firmware-upgrade">Wireless Device Firmware Upgrade</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mcuboot-with-zephyr">MCUboot with zephyr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitions.html">Partitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signing.html">Signing an application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smp_svr.html">SMP Server Sample</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../samples/index.html">Samples and Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../menuconfig.html">Menuconfig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hacking/hacking.html">Hacking stuff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">open source watch</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="fota.html">Firmware Over The Air (FOTA)</a> &raquo;</li>
+        
+      <li>Serial Device Firmware Upgrade</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/fota/mcuboot.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="serial-device-firmware-upgrade">
+<span id="mcuboot"></span><h1>Serial Device Firmware Upgrade<a class="headerlink" href="#serial-device-firmware-upgrade" title="Permalink to this headline">¶</a></h1>
+<p>My main aim is to get this working.
+It has a small footprint, since no need for bluetooth.</p>
+<p>I have not(!) been successfull.</p>
+<p>west build -b ds_d6 samples/display/cfb – -DOVERLAY_CONFIG=’overlay-serial.conf;overlay-fs.conf’  -DCONFIG_MCUBOOT_SIGNATURE_KEY_FILE=”../bootloader/mcuboot/root-rsa-2048.pem”</p>
+</div>
+<div class="section" id="wireless-device-firmware-upgrade">
+<h1>Wireless Device Firmware Upgrade<a class="headerlink" href="#wireless-device-firmware-upgrade" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>In order to perform a FOTA (firmware over the air) update on zephyr you need 2 basic components:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>MCUboot   (a bootloader)</p></li>
+<li><p>SMP Server (a bluetooth service)</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="mcuboot-with-zephyr">
+<span id="id1"></span><h1>MCUboot with zephyr<a class="headerlink" href="#mcuboot-with-zephyr" title="Permalink to this headline">¶</a></h1>
+<p>west build -b ds_d6 -s ../bootloader/mcuboot/boot/zephyr -d build-mcuboot
+west flash -d build-mcuboot –runner blackmagicprobe</p>
+<p>Some additional configuration is required to build applications for MCUboot.</p>
+<p>This is handled internally by the Zephyr configuration system and is wrapped
+in the <cite>CONFIG_BOOTLOADER_MCUBOOT</cite> Kconfig variable, which must be enabled in
+the application’s <cite>prj.conf</cite> file.</p>
+<p>west build -b ds_d6 samples/subsys/console/echo -d build-hello-signed -DCONFIG_MCUBOOT_SIGNATURE_KEY_FILE=”../bootloader/mcuboot/root-rsa-2048.pem”
+west flash -d build-hello-signed –runner blackmagicprobe</p>
+<p>another example with overlays:
+west build -b ds_d6 samples/subsys/mgmt/mcumgr/smp_svr – -DOVERLAY_CONFIG=’overlay-serial.conf;overlay-fs.conf’</p>
+<p>mcumgr -ldebug -t 60 –conntype=serial –connstring=’dev=/dev/ttyACM1,baud=115200’ image list</p>
+<p>In order to upgrade to an image (or even boot it, if
+<cite>MCUBOOT_VALIDATE_PRIMARY_SLOT</cite> is enabled), the images must be signed.</p>
+<p>To make development easier, MCUboot is distributed with some example
+keys.  It is important to stress that these should never be used for
+production, since the private key is publicly available in this
+repository.  See below on how to make your own signatures.</p>
+<p>Images can be signed with the <cite>scripts/imgtool.py</cite> script.  It is best
+to look at <cite>samples/zephyr/Makefile</cite> for examples on how to use this.</p>
+<p>west flash knows where to put the application (you do not have to specify the address of the slot)</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="partitions.html" class="btn btn-neutral float-right" title="Partitions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fota.html" class="btn btn-neutral float-left" title="Firmware Over The Air (FOTA)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; <a href="../copyright.html">Copyright</a> 2019, jj
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>Menuconfig</title>
+    <link rel="stylesheet" href="_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="menuconfig">
+<h1>Menuconfig</h1>
+<div class="section" id="zephyr-is-like-linux">
+<h2>Zephyr is like linux</h2>
+<p>Once you have build a sample, you can add extra stuff by using the configuration menu.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> west build -t menuconfig
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Modules</span>  <span class="o">---&gt;</span>
+    <span class="n">Board</span> <span class="n">Selection</span> <span class="p">(</span><span class="n">nRF52832</span><span class="o">-</span><span class="n">MDK</span><span class="p">)</span>  <span class="o">---&gt;</span>
+    <span class="n">Board</span> <span class="n">Options</span>  <span class="o">---&gt;</span>
+    <span class="n">SoC</span><span class="o">/</span><span class="n">CPU</span><span class="o">/</span><span class="n">Configuration</span> <span class="n">Selection</span> <span class="p">(</span><span class="n">Nordic</span> <span class="n">Semiconductor</span> <span class="n">nRF52</span> <span class="n">series</span> <span class="n">MCU</span><span class="p">)</span>  <span class="o">---&gt;</span>
+    <span class="n">Hardware</span> <span class="n">Configuration</span>  <span class="o">---&gt;</span>
+    <span class="n">ARM</span> <span class="n">Options</span>  <span class="o">---&gt;</span>
+    <span class="n">Architecture</span> <span class="p">(</span><span class="n">ARM</span> <span class="n">architecture</span><span class="p">)</span>  <span class="o">---&gt;</span>
+    <span class="n">General</span> <span class="n">Architecture</span> <span class="n">Options</span>  <span class="o">---&gt;</span>
+<span class="p">[</span> <span class="p">]</span> <span class="n">Floating</span> <span class="n">point</span>  <span class="o">----</span>
+    <span class="n">General</span> <span class="n">Kernel</span> <span class="n">Options</span>  <span class="o">---&gt;</span>
+    <span class="n">C</span> <span class="n">Library</span>  <span class="o">---&gt;</span>
+    <span class="n">Additional</span> <span class="n">libraries</span>  <span class="o">---&gt;</span>
+<span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Bluetooth</span>  <span class="o">---&gt;</span>
+<span class="p">[</span> <span class="p">]</span> <span class="n">C</span><span class="o">++</span> <span class="n">support</span> <span class="k">for</span> <span class="n">the</span> <span class="n">application</span>  <span class="o">----</span>
+    <span class="n">System</span> <span class="n">Monitoring</span> <span class="n">Options</span>  <span class="o">---&gt;</span>
+    <span class="n">Debugging</span> <span class="n">Options</span>  <span class="o">---&gt;</span>
+<span class="p">[</span> <span class="p">]</span> <span class="n">Disk</span> <span class="n">Interface</span>  <span class="o">----</span>
+    <span class="n">File</span> <span class="n">Systems</span>  <span class="o">---&gt;</span>
+<span class="o">-*-</span> <span class="n">Logging</span>  <span class="o">---&gt;</span>
+    <span class="n">Management</span>  <span class="o">---&gt;</span>
+    <span class="n">Networking</span>  <span class="o">---&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="after-saving">
+<h3>after saving :</h3>
+<p>you will need to rebuild the image to include changes in config</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> west build
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

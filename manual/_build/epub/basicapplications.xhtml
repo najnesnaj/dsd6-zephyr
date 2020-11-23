@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>Starting with some basic applications</title>
+    <link rel="stylesheet" href="_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="starting-with-some-basic-applications">
+<h1>Starting with some basic applications</h1>
+<p>The best way to get a feel of zephyr, is to start building sample applications.</p>
+<p>The gpio ports, i2c communication, memory layout, stuff that is particular for the watch is defined in the board definition file.</p>
+<p>The provided samples are standard zephyr application, with some minor modifications.</p>
+<div class="section" id="blinky-example">
+<h2>Blinky    example</h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">watch</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">contain</span> <span class="n">a</span> <span class="n">led</span> <span class="k">as</span> <span class="n">such</span><span class="p">,</span> <span class="n">but</span> <span class="n">it</span> <span class="n">has</span> <span class="n">a</span> <span class="n">heart</span> <span class="n">rate</span> <span class="n">sensor</span><span class="o">.</span>
+
+<span class="n">Powering</span> <span class="n">the</span> <span class="n">heart</span> <span class="n">rate</span> <span class="n">sensor</span><span class="p">,</span> <span class="n">lights</span> <span class="n">up</span> <span class="n">the</span> <span class="n">green</span> <span class="n">led</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>have a look at the ds_d6.dts file, here you see the definition of the led.</p>
+<p><cite>building an image, which can be found under the build directory</cite></p>
+<p>see : <span class="xref std std-ref">blinky-sample</span></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> ~/zephyrproject/zephyr
+<span class="gp">$</span> west build -p -b ds_d6 samples/basic/blinky
+</pre></div>
+</div>
+<p>once the compilation is completed,  you can find the firmware under :
+~/zephyrproject/zephyr/build/zephyr/zephyr.bin</p>
+<p>you can upload it with:</p>
+<p>west flash
+or
+west flash –runner blackmagicprobe (or jlink, or ….)</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

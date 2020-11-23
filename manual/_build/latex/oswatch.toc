@@ -1,0 +1,77 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}author:}{3}{chapter.1}
+\contentsline {chapter}{\numberline {2}LICENSE:}{5}{chapter.2}
+\contentsline {chapter}{\numberline {3}Zephyr for the ds\sphinxhyphen {}d6 smartwatch}{7}{chapter.3}
+\contentsline {chapter}{\numberline {4}Install zephyr}{9}{chapter.4}
+\contentsline {chapter}{\numberline {5}On the subject of UART}{11}{chapter.5}
+\contentsline {section}{\numberline {5.1}read and learn}{11}{section.5.1}
+\contentsline {chapter}{\numberline {6}The black magic probe}{13}{chapter.6}
+\contentsline {section}{\numberline {6.1}probes in zephyr}{13}{section.6.1}
+\contentsline {section}{\numberline {6.2}howto setup a blackmagicprobe}{13}{section.6.2}
+\contentsline {chapter}{\numberline {7}Starting with some basic applications}{15}{chapter.7}
+\contentsline {section}{\numberline {7.1}Blinky example}{15}{section.7.1}
+\contentsline {chapter}{\numberline {8}bluetooth (BLE) example}{17}{chapter.8}
+\contentsline {section}{\numberline {8.1}Using the created bluetooth sample:}{17}{section.8.1}
+\contentsline {section}{\numberline {8.2}Ble Peripheral}{17}{section.8.2}
+\contentsline {section}{\numberline {8.3}using Python to read out bluetoothservices}{18}{section.8.3}
+\contentsline {chapter}{\numberline {9}display (ssd1306)}{19}{chapter.9}
+\contentsline {section}{\numberline {9.1}Display example}{19}{section.9.1}
+\contentsline {chapter}{\numberline {10}LittlevGL Basic Sample}{21}{chapter.10}
+\contentsline {section}{\numberline {10.1}Overview}{21}{section.10.1}
+\contentsline {section}{\numberline {10.2}Todo}{21}{section.10.2}
+\contentsline {section}{\numberline {10.3}References}{21}{section.10.3}
+\contentsline {chapter}{\numberline {11}Current Time Service}{23}{chapter.11}
+\contentsline {section}{\numberline {11.1}Requirements:}{23}{section.11.1}
+\contentsline {section}{\numberline {11.2}BLE Peripheral CTS sample for zephyr}{23}{section.11.2}
+\contentsline {section}{\numberline {11.3}Using bluez on linux to connect}{23}{section.11.3}
+\contentsline {section}{\numberline {11.4}Howto use Bluez on linux to set up a time service}{24}{section.11.4}
+\contentsline {section}{\numberline {11.5}Howto use Android to set up a time service}{24}{section.11.5}
+\contentsline {chapter}{\numberline {12}Firmware Over The Air (FOTA)}{25}{chapter.12}
+\contentsline {section}{\numberline {12.1}Serial Device Firmware Upgrade}{25}{section.12.1}
+\contentsline {section}{\numberline {12.2}Wireless Device Firmware Upgrade}{25}{section.12.2}
+\contentsline {subsection}{\numberline {12.2.1}Overview}{25}{subsection.12.2.1}
+\contentsline {section}{\numberline {12.3}MCUboot with zephyr}{25}{section.12.3}
+\contentsline {section}{\numberline {12.4}Partitions}{26}{section.12.4}
+\contentsline {subsection}{\numberline {12.4.1}Defining partitions for MCUboot}{26}{subsection.12.4.1}
+\contentsline {subsection}{\numberline {12.4.2}Remark}{26}{subsection.12.4.2}
+\contentsline {section}{\numberline {12.5}Signing an application}{26}{section.12.5}
+\contentsline {subsection}{\numberline {12.5.1}Generating a new keypair}{26}{subsection.12.5.1}
+\contentsline {subsection}{\numberline {12.5.2}Extracting the public key}{27}{subsection.12.5.2}
+\contentsline {subsection}{\numberline {12.5.3}Example}{27}{subsection.12.5.3}
+\contentsline {section}{\numberline {12.6}SMP Server Sample}{27}{section.12.6}
+\contentsline {subsection}{\numberline {12.6.1}Overview}{27}{subsection.12.6.1}
+\contentsline {subsection}{\numberline {12.6.2}Requirements}{27}{subsection.12.6.2}
+\contentsline {subsection}{\numberline {12.6.3}Building and Running}{27}{subsection.12.6.3}
+\contentsline {subsubsection}{Step 1: Build smp\_svr}{28}{subsubsection*.3}
+\contentsline {subsubsection}{Step 2: Sign the image}{28}{subsubsection*.4}
+\contentsline {subsubsection}{Step 3: Flash the smp\_svr image}{28}{subsubsection*.5}
+\contentsline {subsubsection}{Step 4: Run it!}{28}{subsubsection*.6}
+\contentsline {subsubsection}{Step 5: Device Firmware Upgrade}{28}{subsubsection*.7}
+\contentsline {paragraph}{List the images}{29}{paragraph*.8}
+\contentsline {paragraph}{Test the image}{29}{paragraph*.9}
+\contentsline {paragraph}{Reset remotely}{29}{paragraph*.10}
+\contentsline {chapter}{\numberline {13}Samples and Demos}{31}{chapter.13}
+\contentsline {section}{\numberline {13.1}Character frame buffer}{31}{section.13.1}
+\contentsline {subsection}{\numberline {13.1.1}Overview}{31}{subsection.13.1.1}
+\contentsline {subsection}{\numberline {13.1.2}Building and Running}{31}{subsection.13.1.2}
+\contentsline {section}{\numberline {13.2}Bluetooth: Peripheral UART}{31}{section.13.2}
+\contentsline {section}{\numberline {13.3}TODO}{31}{section.13.3}
+\contentsline {subsection}{\numberline {13.3.1}Overview}{32}{subsection.13.3.1}
+\contentsline {subsection}{\numberline {13.3.2}Debugging}{32}{subsection.13.3.2}
+\contentsline {subsection}{\numberline {13.3.3}Building and running}{32}{subsection.13.3.3}
+\contentsline {subsubsection}{Testing}{32}{subsubsection*.16}
+\contentsline {subsection}{\numberline {13.3.4}Dependencies}{32}{subsection.13.3.4}
+\contentsline {section}{\numberline {13.4}Bluetooth: NUS shell transport}{33}{section.13.4}
+\contentsline {section}{\numberline {13.5}TODO}{33}{section.13.5}
+\contentsline {subsection}{\numberline {13.5.1}Overview}{33}{subsection.13.5.1}
+\contentsline {subsection}{\numberline {13.5.2}Building and running}{33}{subsection.13.5.2}
+\contentsline {subsubsection}{Testing using the BLE Console}{33}{subsubsection*.17}
+\contentsline {subsection}{\numberline {13.5.3}Dependencies}{33}{subsection.13.5.3}
+\contentsline {chapter}{\numberline {14}Menuconfig}{35}{chapter.14}
+\contentsline {section}{\numberline {14.1}Zephyr is like linux}{35}{section.14.1}
+\contentsline {subsection}{\numberline {14.1.1}after saving :}{35}{subsection.14.1.1}
+\contentsline {chapter}{\numberline {15}Hacking stuff}{37}{chapter.15}
+\contentsline {section}{\numberline {15.1}debugging the ds\sphinxhyphen {}d6 smartwatch}{37}{section.15.1}
+\contentsline {section}{\numberline {15.2}howto generate pdf documents}{37}{section.15.2}
+\contentsline {chapter}{\numberline {16}About}{39}{chapter.16}
+\contentsline {section}{\numberline {16.1}What is already working :}{39}{section.16.1}

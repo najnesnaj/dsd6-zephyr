@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>Serial Device Firmware Upgrade</title>
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="serial-device-firmware-upgrade">
+<span id="mcuboot"></span><h1>Serial Device Firmware Upgrade</h1>
+<p>My main aim is to get this working.
+It has a small footprint, since no need for bluetooth.</p>
+<p>I have not(!) been successfull.</p>
+<p>west build -b ds_d6 samples/display/cfb – -DOVERLAY_CONFIG=’overlay-serial.conf;overlay-fs.conf’  -DCONFIG_MCUBOOT_SIGNATURE_KEY_FILE=”../bootloader/mcuboot/root-rsa-2048.pem”</p>
+</div>
+<div class="section" id="wireless-device-firmware-upgrade">
+<h1>Wireless Device Firmware Upgrade</h1>
+<div class="section" id="overview">
+<h2>Overview</h2>
+<p>In order to perform a FOTA (firmware over the air) update on zephyr you need 2 basic components:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>MCUboot   (a bootloader)</p></li>
+<li><p>SMP Server (a bluetooth service)</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="mcuboot-with-zephyr">
+<span id="id1"></span><h1>MCUboot with zephyr</h1>
+<p>west build -b ds_d6 -s ../bootloader/mcuboot/boot/zephyr -d build-mcuboot
+west flash -d build-mcuboot –runner blackmagicprobe</p>
+<p>Some additional configuration is required to build applications for MCUboot.</p>
+<p>This is handled internally by the Zephyr configuration system and is wrapped
+in the <cite>CONFIG_BOOTLOADER_MCUBOOT</cite> Kconfig variable, which must be enabled in
+the application’s <cite>prj.conf</cite> file.</p>
+<p>west build -b ds_d6 samples/subsys/console/echo -d build-hello-signed -DCONFIG_MCUBOOT_SIGNATURE_KEY_FILE=”../bootloader/mcuboot/root-rsa-2048.pem”
+west flash -d build-hello-signed –runner blackmagicprobe</p>
+<p>another example with overlays:
+west build -b ds_d6 samples/subsys/mgmt/mcumgr/smp_svr – -DOVERLAY_CONFIG=’overlay-serial.conf;overlay-fs.conf’</p>
+<p>mcumgr -ldebug -t 60 –conntype=serial –connstring=’dev=/dev/ttyACM1,baud=115200’ image list</p>
+<p>In order to upgrade to an image (or even boot it, if
+<cite>MCUBOOT_VALIDATE_PRIMARY_SLOT</cite> is enabled), the images must be signed.</p>
+<p>To make development easier, MCUboot is distributed with some example
+keys.  It is important to stress that these should never be used for
+production, since the private key is publicly available in this
+repository.  See below on how to make your own signatures.</p>
+<p>Images can be signed with the <cite>scripts/imgtool.py</cite> script.  It is best
+to look at <cite>samples/zephyr/Makefile</cite> for examples on how to use this.</p>
+<p>west flash knows where to put the application (you do not have to specify the address of the slot)</p>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

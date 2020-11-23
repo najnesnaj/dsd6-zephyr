@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bluetooth: NUS shell transport</title>
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bluetooth-nus-shell-transport">
+<span id="shell-bt-nus"></span><h1>Bluetooth: NUS shell transport</h1>
+<p>for this, you will need the nordic branch of zephyr (<a class="reference external" href="https://github.com/nrfconnect/sdk-zephyr">https://github.com/nrfconnect/sdk-zephyr</a>)</p>
+<p>The Nordic UART Service (NUS) shell transport sample demonstrates how to use the <span class="xref std std-ref">shell_bt_nus_readme</span> to receive shell commands from a remote device.</p>
+</div>
+<div class="section" id="todo">
+<h1>TODO</h1>
+<p>You can use the shell to type messages on the OLED screen (cfb character frame buffer)
+You can use bluetooth shell to type messages on OLED screen.</p>
+<p>It would be really cool to use bt-shell to type message on uart (and the other way around)</p>
+<p>I experimented with bt-shell and here you can use gatt to type characters on bluetooth.</p>
+<div class="section" id="overview">
+<h2>Overview</h2>
+<p>When the connection is established, you can connect to the sample through the <span class="xref std std-ref">nus_service_readme</span> by using a host application.
+You can then send shell commands, that are executed on the device that runs the sample, and see the logs.
+See <span class="xref std std-ref">shell_bt_nus_host_tools</span> for more information about the host tools available, in <a href="#id1"><span class="problematic" id="id2">|NCS|</span></a>, for communicating with the sample.</p>
+</div>
+<div class="section" id="building-and-running">
+<h2>Building and running</h2>
+<div class="section" id="testing-using-the-ble-console">
+<h3>Testing using the BLE Console</h3>
+<p>See <span class="xref std std-ref">ble_console_readme</span> for more information on how to test the sample using the BLE Console.</p>
+</div>
+</div>
+<div class="section" id="dependencies">
+<h2>Dependencies</h2>
+<p>This sample uses the following <a href="#id3"><span class="problematic" id="id4">|NCS|</span></a> libraries:</p>
+<ul class="simple">
+<li><p><span class="xref std std-ref">shell_bt_nus_readme</span></p></li>
+<li><p><span class="xref std std-ref">nus_service_readme</span></p></li>
+</ul>
+<p>In addition, it uses the following Zephyr libraries:</p>
+<ul class="simple">
+<li><p><span class="xref std std-ref">zephyr:bluetooth_api</span>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">include/bluetooth/bluetooth.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">include/bluetooth/hci.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">include/bluetooth/uuid.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">include/bluetooth/gatt.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samples/bluetooth/gatt/bas.h</span></code></p></li>
+</ul>
+</li>
+<li><p><span class="xref std std-ref">zephyr:logging_api</span></p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

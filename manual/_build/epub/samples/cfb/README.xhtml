@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>Character frame buffer</title>
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="character-frame-buffer">
+<span id="character-frame-buffer-sample"></span><h1>Character frame buffer</h1>
+<div class="section" id="overview">
+<h2>Overview</h2>
+<p>This sample displays character strings using the Character Frame Buffer
+(CFB) subsystem framework.</p>
+</div>
+<div class="section" id="building-and-running">
+<h2>Building and Running</h2>
+<p>build the application: west build -p -b ds_d6 samples/display/cfb</p>
+<p>on unix : #minicom -b 115200 -D /dev/ttyACM1</p>
+<p>you get a shell and you can type help</p>
+<p>to display something on the screen :
+cfb init
+cfb invert
+cfp print 0 0 “hello world”</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

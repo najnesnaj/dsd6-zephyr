@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>debugging the ds-d6 smartwatch</title>
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="debugging-the-ds-d6-smartwatch">
+<h1>debugging   the ds-d6 smartwatch</h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">ds</span><span class="o">-</span><span class="n">D6</span> <span class="n">has</span> <span class="n">a</span> <span class="n">serial</span> <span class="n">port</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>The blackmagicprobe can lauch a debugger : west debug –runnerblackmagicprobe.
+The probe has a serial port /dev/ttyACM1 (linux : minicom -b 115200 -D /dev/ttyACM1)</p>
+<p>The Segger Jlink, which is kind of standard in zephyr can use the the swd-connector for debug messages as well.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Segger JLink offers the JLinkRTTViewer.
+In order to use it, you can set this in ds_d6_defconfig (boardconfig)
+CONFIG_LOG=y
+CONFIG_USE_SEGGER_RTT=y
+CONFIG_SHELL=y
+CONFIG_SHELL_BACKEND_RTT=y</p>
+</div>
+<p>sniffing memory</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">The JLink probe allowed to check memory at 0x5000504 and 0x50000514.</span>
+<span class="gp">#</span>mem32 0x5000504 0x1
+<span class="go">or write a value</span>
+<span class="gp">#</span>w4 0x50000504 0x12345678
+<span class="go">This allowed me to check GPIO ports.</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

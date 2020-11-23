@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>display (ssd1306)</title>
+    <link rel="stylesheet" href="_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="display-ssd1306">
+<span id="display-sample"></span><h1>display (ssd1306)</h1>
+<p>in order to get the ds d6 display working
+you will need to replace the standard display driver by the one provided in the directory drivers
+(file ssd1306.c)</p>
+<p>for the id107 hr plus you will need the ssd1306.c-id107hrplus.</p>
+<div class="section" id="display-example">
+<h2>Display    example</h2>
+<p>The display uses the character frame buffer (cfb).</p>
+<p>There are two samples which should work out of the box.</p>
+<p>check out the  cfb_shell - samples, which is really cool.
+You will need a serial connection :eg. :  minicom -b 115200 -D /dev/ttyACM1.
+(just type help to get an overview of commands)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span>  cfb init
+<span class="gp">$</span>  cfb print <span class="m">0</span> <span class="m">0</span> <span class="s2">&quot;hello world&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span>  west build -p -b ds_d6 samples/display/cfb
+<span class="go">or</span>
+<span class="gp">$</span>  west build -p -b ds_d6 samples/display/cfb_shell
+</pre></div>
+</div>
+<p>Displaying graphics should possible with the lvgl module. (work in progress)</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

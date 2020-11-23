@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Bluetooth: Peripheral UART &mdash; open source watch 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="Bluetooth: NUS shell transport" href="../shell_bt_nus/README.html" />
+    <link rel="prev" title="Character frame buffer" href="../cfb/README.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> open source watch
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content.html">Zephyr for the ds-d6    smartwatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Install zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uart.html">On the subject of UART</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../blackmagicprobe.html">The black magic probe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basicapplications.html">Starting with some basic applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bluetooth.html">bluetooth (BLE) example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../display.html">display (ssd1306)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lvgl.html">LittlevGL Basic Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../current-time.html">Current Time Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fota/fota.html">Firmware Over The Air (FOTA)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Samples and Demos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../cfb/README.html">Character frame buffer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Bluetooth: Peripheral UART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#todo">TODO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debugging">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-and-running">Building and running</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#testing">Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../shell_bt_nus/README.html">Bluetooth: NUS shell transport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shell_bt_nus/README.html#todo">TODO</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../menuconfig.html">Menuconfig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hacking/hacking.html">Hacking stuff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">open source watch</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Samples and Demos</a> &raquo;</li>
+        
+      <li>Bluetooth: Peripheral UART</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/samples/peripheral_uart/README.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bluetooth-peripheral-uart">
+<span id="peripheral-uart"></span><h1>Bluetooth: Peripheral UART<a class="headerlink" href="#bluetooth-peripheral-uart" title="Permalink to this headline">¶</a></h1>
+<p>for this you will need the nordic branch of zephyr : nrfconnect/sdk-zephyr</p>
+</div>
+<div class="section" id="todo">
+<h1>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h1>
+<p>this samples prints data on serial port on the bluetooth service (and the other way around)</p>
+<p>it would be cool if you could use cfb (character frame buffer) as well. (send messages to screen)</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#overview" id="id3">Overview</a></p></li>
+<li><p><a class="reference internal" href="#debugging" id="id4">Debugging</a></p></li>
+<li><p><a class="reference internal" href="#building-and-running" id="id5">Building and running</a></p>
+<ul>
+<li><p><a class="reference internal" href="#testing" id="id6">Testing</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#dependencies" id="id7">Dependencies</a></p></li>
+</ul>
+</div>
+<p>The Peripheral UART sample demonstrates how to use the <span class="xref std std-ref">nus_service_readme</span>.
+It uses the NUS service to send data back and forth between a UART connection and a Bluetooth LE connection, emulating a serial port over Bluetooth LE.</p>
+<div class="section" id="overview">
+<h2><a class="toc-backref" href="#id3">Overview</a><a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>When connected, the sample forwards any data received on the RX pin of the UART 1 peripheral to the Bluetooth LE unit.
+On Nordic Semiconductor’s development kits, the UART 1 peripheral is typically gated through the SEGGER chip to a USB CDC virtual serial port.</p>
+<p>Any data sent from the Bluetooth LE unit is sent out of the UART 1 peripheral’s TX pin.</p>
+</div>
+<div class="section" id="debugging">
+<span id="peripheral-uart-debug"></span><h2><a class="toc-backref" href="#id4">Debugging</a><a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
+<p>In this sample, the UART console is used to send and read data over the NUS service.
+Debug messages are not displayed in this UART console.
+Instead, they are printed by the RTT logger.</p>
+<p>If you want to view the debug messages, follow the procedure in <span class="xref std std-ref">testing_rtt_connect</span>.</p>
+</div>
+<div class="section" id="building-and-running">
+<h2><a class="toc-backref" href="#id5">Building and running</a><a class="headerlink" href="#building-and-running" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="testing">
+<span id="peripheral-uart-testing"></span><h3><a class="toc-backref" href="#id6">Testing</a><a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="dependencies">
+<h2><a class="toc-backref" href="#id7">Dependencies</a><a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>This sample uses the following <a href="#id1"><span class="problematic" id="id2">|NCS|</span></a> libraries:</p>
+<ul class="simple">
+<li><p><span class="xref std std-ref">nus_service_readme</span></p></li>
+</ul>
+<p>In addition, it uses the following Zephyr libraries:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">include/zephyr/types.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boards/arm/nrf*/board.h</span></code></p></li>
+<li><p><span class="xref std std-ref">zephyr:kernel_api</span>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">include/kernel.h</span></code></p></li>
+</ul>
+</li>
+<li><p><span class="xref std std-ref">zephyr:api_peripherals</span>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">incude/gpio.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">include/uart.h</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><span class="xref std std-ref">zephyr:bluetooth_api</span>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">include/bluetooth/bluetooth.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">include/bluetooth/gatt.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">include/bluetooth/hci.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">include/bluetooth/uuid.h</span></code></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../shell_bt_nus/README.html" class="btn btn-neutral float-right" title="Bluetooth: NUS shell transport" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../cfb/README.html" class="btn btn-neutral float-left" title="Character frame buffer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; <a href="../../copyright.html">Copyright</a> 2019, jj
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

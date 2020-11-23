@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>On the subject of UART</title>
+    <link rel="stylesheet" href="_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="on-the-subject-of-uart">
+<h1>On the subject of UART</h1>
+<p>As I am predisposed of finding out things the hard way, it took me a while to notice why the serial port was only partly functioning :</p>
+<ul class="simple">
+<li><p>I used a wrong pin on my dev-board (id107 HR watch)</p></li>
+<li><p>I used a USB - el cheapo - serial port</p></li>
+</ul>
+<p>The nrf52 is an arm chip with TTL levels of 3.3V, so you need a plug that can handle this voltage instead of the usual 5V.</p>
+<p>I did not want to spend money and wait for the postman.
+I had an stm32f103c8 lying around.</p>
+<p>This could be converted in a blackmagicprobe, which has a debugprobe and(!) a serial port. The stm32 is 3.3V compatible. Problem solved, which is quite cool, since it uses up only one USB-port.</p>
+<div class="section" id="read-and-learn">
+<h2>read and learn</h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">To</span> <span class="nb">compile</span> <span class="n">a</span> <span class="n">program</span> <span class="k">with</span> <span class="n">a</span> <span class="n">non</span> <span class="n">standard</span> <span class="p">(</span><span class="o">=</span><span class="n">jlink</span><span class="p">)</span> <span class="n">debugger</span><span class="p">:</span>
+<span class="n">west</span> <span class="n">flash</span> <span class="o">--</span><span class="n">runner</span> <span class="n">blackmagicprobe</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>
