@@ -12,8 +12,8 @@
     <dc:publisher>najnesnaj@yahoo.com</dc:publisher>
     <dc:rights>2019, jj</dc:rights>
     <dc:identifier id="unknown">unknown</dc:identifier>
-    <dc:date>2020-11-23T16:53:40Z</dc:date>
-    <meta property="dcterms:modified">2020-11-23T16:53:40Z</meta>
+    <dc:date>2020-11-27T12:28:43Z</dc:date>
+    <meta property="dcterms:modified">2020-11-27T12:28:43Z</meta>
     <meta property="ibooks:version">beta</meta>
     <meta property="ibooks:specified-fonts">true</meta>
     <meta property="ibooks:binding">true</meta>
@@ -55,8 +55,10 @@
     <item id="epub-30" href="hacking/latexpdf.xhtml" media-type="application/xhtml+xml" />
     <item id="epub-31" href="samples/index.xhtml" media-type="application/xhtml+xml" />
     <item id="epub-32" href="samples/cfb/README.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-33" href="samples/peripheral_uart/README.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-34" href="samples/shell_bt_nus/README.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-33" href="samples/lvgl/README.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-34" href="samples/lvgl2/README.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-35" href="samples/peripheral_uart/README.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-36" href="samples/shell_bt_nus/README.xhtml" media-type="application/xhtml+xml" />
   </manifest>
   <spine toc="ncx" page-progression-direction="ltr">
     <itemref idref="epub-9" />
@@ -77,7 +79,8 @@
     <itemref idref="epub-27" />
     <itemref idref="epub-31" />
     <itemref idref="epub-32" />
-    <itemref idref="epub-33" />
+    <itemref idref="epub-35" />
+    <itemref idref="epub-36" />
     <itemref idref="epub-34" />
     <itemref idref="epub-12" />
     <itemref idref="epub-29" />
@@ -85,6 +88,7 @@
     <itemref idref="epub-30" />
     <itemref idref="epub-0" />
     <itemref idref="epub-8" />
+    <itemref idref="epub-33" linear="no" />
   </spine>
   <guide>
     <reference type="toc" title="Table of Contents" href="index.xhtml" />

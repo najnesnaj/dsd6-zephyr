@@ -72,7 +72,7 @@
 
 
 \title{open source watch Documentation}
-\date{Nov 23, 2020}
+\date{Nov 27, 2020}
 \release{1.0.0}
 \author{jj}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -387,7 +387,7 @@ You will need a serial connection :eg. :  minicom \sphinxhyphen{}b 115200 \sphin
 \PYG{g+gp}{\PYGZdl{}}  west build \PYGZhy{}p \PYGZhy{}b ds\PYGZus{}d6 samples/display/cfb\PYGZus{}shell
 \end{sphinxVerbatim}
 
-Displaying graphics should possible with the lvgl module. (work in progress)
+Displaying special graphics (not just character) is  possible with the lvgl module.
 
 
 \chapter{LittlevGL Basic Sample}
@@ -400,12 +400,47 @@ This sample application displays “Hello World” in the center of the screen.
 LittlevGL is a free and open\sphinxhyphen{}source graphics library providing everything you need to create embedded GUI with easy\sphinxhyphen{}to\sphinxhyphen{}use graphical elements, beautiful visual effects and low memory footprint.
 
 
-\section{Todo}
-\label{\detokenize{lvgl:todo}}\begin{itemize}
+\section{Settings}
+\label{\detokenize{lvgl:settings}}\begin{itemize}
 \item {} 
-This is work in progress. It should be possible, but since OLED is monochrome, it will needs some tweeking.
+the lvgl settings happen in the config file (or what it in prj.cfg)
+
+\item {} 
+the ssd1306 is a monochrome display
 
 \end{itemize}
+
+CONFIG\_SPI=y
+CONFIG\_LVGL\_DISPLAY\_DEV\_NAME=”SSD1306”
+CONFIG\_LVGL\_HOR\_RES\_MAX=128
+CONFIG\_LVGL\_VER\_RES\_MAX=32
+CONFIG\_LVGL\_VDB\_SIZE=64
+CONFIG\_LVGL\_BITS\_PER\_PIXEL=1
+CONFIG\_LVGL=y
+CONFIG\_LVGL\_COLOR\_DEPTH\_1=y
+CONFIG\_LVGL\_COLOR\_TRANSP\_GREEN=y
+CONFIG\_LVGL\_USE\_API\_EXTENSION\_V6=y
+CONFIG\_LVGL\_USE\_API\_EXTENSION\_V7=y
+CONFIG\_LVGL\_USE\_THEME\_MONO=y
+CONFIG\_LVGL\_THEME\_DEFAULT\_COLOR\_PRIMARY\_WHITE=y
+CONFIG\_LVGL\_THEME\_DEFAULT\_COLOR\_SECONDARY\_BLACK=y
+
+CONFIG\_LVGL\_EXT\_CLICK\_AREA\_OFF=y
+CONFIG\_LVGL\_USE\_LABEL=y
+
+CONFIG\_LVGL\_LABEL\_DEF\_SCROLL\_SPEED=25
+CONFIG\_LVGL\_LABEL\_WAIT\_CHAR\_COUNT=3
+\begin{quote}
+
+CONFIG\_LOG\_PROCESS\_TRIGGER\_THRESHOLD=10
+CONFIG\_LOG\_PROCESS\_THREAD=y
+CONFIG\_LOG\_PROCESS\_THREAD\_SLEEP\_MS=1000
+CONFIG\_LOG\_PROCESS\_THREAD\_STACK\_SIZE=768
+CONFIG\_LOG\_BUFFER\_SIZE=1024
+CONFIG\_LOG\_DETECT\_MISSED\_STRDUP=y
+CONFIG\_LOG\_STRDUP\_MAX\_STRING=400
+CONFIG\_LOG\_STRDUP\_BUF\_COUNT=32
+\end{quote}
 
 
 \section{References}
@@ -1051,6 +1086,27 @@ In addition, it uses the following Zephyr libraries:
 
 \end{itemize}
 
+
+\section{LittlevGL Basic Sample}
+\label{\detokenize{samples/lvgl2/README:littlevgl-basic-sample}}\label{\detokenize{samples/lvgl2/README:lvgl-sample}}\label{\detokenize{samples/lvgl2/README::doc}}
+
+\subsection{Overview}
+\label{\detokenize{samples/lvgl2/README:overview}}
+This sample application displays “Hello World” in the center of the screen.
+
+
+\subsection{Requirements}
+\label{\detokenize{samples/lvgl2/README:requirements}}
+
+\subsection{Building and Running}
+\label{\detokenize{samples/lvgl2/README:building-and-running}}
+copy sample to your zephyr directory ../samples/display
+
+west build \sphinxhyphen{}p \sphinxhyphen{}b ds\_d6 \sphinxhyphen{}d build\sphinxhyphen{}lvgl samples/display/lvgl2
+
+
+\subsection{References}
+\label{\detokenize{samples/lvgl2/README:references}}
 
 \chapter{Menuconfig}
 \label{\detokenize{menuconfig:menuconfig}}\label{\detokenize{menuconfig::doc}}

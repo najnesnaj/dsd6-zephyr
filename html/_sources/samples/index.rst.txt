@@ -13,6 +13,7 @@ This is just a collection of them.
    cfb/*
    peripheral_uart/*
    shell_bt_nus/*
+   lvgl2/*
 
 .. comment
    To add a new sample document, please use the template available under

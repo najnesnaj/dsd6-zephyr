@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {9.1}Display example}{19}{section.9.1}
 \contentsline {chapter}{\numberline {10}LittlevGL Basic Sample}{21}{chapter.10}
 \contentsline {section}{\numberline {10.1}Overview}{21}{section.10.1}
-\contentsline {section}{\numberline {10.2}Todo}{21}{section.10.2}
+\contentsline {section}{\numberline {10.2}Settings}{21}{section.10.2}
 \contentsline {section}{\numberline {10.3}References}{21}{section.10.3}
 \contentsline {chapter}{\numberline {11}Current Time Service}{23}{chapter.11}
 \contentsline {section}{\numberline {11.1}Requirements:}{23}{section.11.1}
@@ -67,6 +67,11 @@
 \contentsline {subsection}{\numberline {13.5.2}Building and running}{33}{subsection.13.5.2}
 \contentsline {subsubsection}{Testing using the BLE Console}{33}{subsubsection*.17}
 \contentsline {subsection}{\numberline {13.5.3}Dependencies}{33}{subsection.13.5.3}
+\contentsline {section}{\numberline {13.6}LittlevGL Basic Sample}{34}{section.13.6}
+\contentsline {subsection}{\numberline {13.6.1}Overview}{34}{subsection.13.6.1}
+\contentsline {subsection}{\numberline {13.6.2}Requirements}{34}{subsection.13.6.2}
+\contentsline {subsection}{\numberline {13.6.3}Building and Running}{34}{subsection.13.6.3}
+\contentsline {subsection}{\numberline {13.6.4}References}{34}{subsection.13.6.4}
 \contentsline {chapter}{\numberline {14}Menuconfig}{35}{chapter.14}
 \contentsline {section}{\numberline {14.1}Zephyr is like linux}{35}{section.14.1}
 \contentsline {subsection}{\numberline {14.1.1}after saving :}{35}{subsection.14.1.1}

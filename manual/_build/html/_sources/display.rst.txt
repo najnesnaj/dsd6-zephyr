@@ -41,4 +41,4 @@ You will need a serial connection :eg. :  minicom -b 115200 -D /dev/ttyACM1.
 
 
 
-Displaying graphics should possible with the lvgl module. (work in progress)
+Displaying special graphics (not just character) is  possible with the lvgl module.

@@ -79,13 +79,13 @@ In this repository you can find files that supplement a zephyr installation.
 - RTC
 - CTS (setting time in bluetooth)
 - DFU (wireless firmware update)
+- graphics libraries
+- - LittlevGL
 
 ### TODO
 - DFU (serial firmware update)
 - accel sensor
 - heart rate sensor
-- graphics libraries
-- - LittlevGL
 - HR detection (algorithm)
 - accel sensor (eg step counter)
 - powermanagement
