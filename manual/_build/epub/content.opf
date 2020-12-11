@@ -12,8 +12,8 @@
     <dc:publisher>najnesnaj@yahoo.com</dc:publisher>
     <dc:rights>2019, jj</dc:rights>
     <dc:identifier id="unknown">unknown</dc:identifier>
-    <dc:date>2020-11-27T12:28:43Z</dc:date>
-    <meta property="dcterms:modified">2020-11-27T12:28:43Z</meta>
+    <dc:date>2020-12-11T12:08:38Z</dc:date>
+    <meta property="dcterms:modified">2020-12-11T12:08:38Z</meta>
     <meta property="ibooks:version">beta</meta>
     <meta property="ibooks:specified-fonts">true</meta>
     <meta property="ibooks:binding">true</meta>
@@ -35,60 +35,64 @@
     <item id="epub-10" href="installation.xhtml" media-type="application/xhtml+xml" />
     <item id="epub-11" href="lvgl.xhtml" media-type="application/xhtml+xml" />
     <item id="epub-12" href="menuconfig.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-13" href="uart.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-14" href="_images/blackmagicd6.jpeg" media-type="image/jpeg" />
-    <item id="epub-15" href="_images/dsd6.jpg" media-type="image/jpeg" />
-    <item id="epub-16" href="_images/zephyr_logo.png" media-type="image/png" />
-    <item id="epub-17" href="_static/basic.css" media-type="text/css" />
-    <item id="epub-18" href="_static/epub.css" media-type="text/css" />
-    <item id="epub-19" href="_static/file.png" media-type="image/png" />
-    <item id="epub-20" href="_static/minus.png" media-type="image/png" />
-    <item id="epub-21" href="_static/plus.png" media-type="image/png" />
-    <item id="epub-22" href="_static/pygments.css" media-type="text/css" />
-    <item id="epub-23" href="fota/fota.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-24" href="fota/mcuboot.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-25" href="fota/partitions.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-26" href="fota/signing.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-27" href="fota/smp_svr.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-28" href="hacking/debugging.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-29" href="hacking/hacking.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-30" href="hacking/latexpdf.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-31" href="samples/index.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-32" href="samples/cfb/README.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-33" href="samples/lvgl/README.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-34" href="samples/lvgl2/README.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-35" href="samples/peripheral_uart/README.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-36" href="samples/shell_bt_nus/README.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-13" href="sensor.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-14" href="uart.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-15" href="_images/blackmagicd6.jpeg" media-type="image/jpeg" />
+    <item id="epub-16" href="_images/dsd6.jpg" media-type="image/jpeg" />
+    <item id="epub-17" href="_images/zephyr_logo.png" media-type="image/png" />
+    <item id="epub-18" href="_static/basic.css" media-type="text/css" />
+    <item id="epub-19" href="_static/epub.css" media-type="text/css" />
+    <item id="epub-20" href="_static/file.png" media-type="image/png" />
+    <item id="epub-21" href="_static/minus.png" media-type="image/png" />
+    <item id="epub-22" href="_static/plus.png" media-type="image/png" />
+    <item id="epub-23" href="_static/pygments.css" media-type="text/css" />
+    <item id="epub-24" href="fota/fota.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-25" href="fota/mcuboot.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-26" href="fota/partitions.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-27" href="fota/signing.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-28" href="fota/smp_svr.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-29" href="hacking/debugging.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-30" href="hacking/hacking.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-31" href="hacking/latexpdf.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-32" href="samples/index.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-33" href="samples/cfb/README.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-34" href="samples/lvgl/README.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-35" href="samples/lvgl2/README.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-36" href="samples/max44009/README.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-37" href="samples/peripheral_uart/README.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-38" href="samples/shell_bt_nus/README.xhtml" media-type="application/xhtml+xml" />
   </manifest>
   <spine toc="ncx" page-progression-direction="ltr">
     <itemref idref="epub-9" />
     <itemref idref="epub-5" />
     <itemref idref="epub-4" />
     <itemref idref="epub-10" />
-    <itemref idref="epub-13" />
+    <itemref idref="epub-14" />
     <itemref idref="epub-2" />
     <itemref idref="epub-1" />
     <itemref idref="epub-3" />
     <itemref idref="epub-7" />
     <itemref idref="epub-11" />
+    <itemref idref="epub-13" />
     <itemref idref="epub-6" />
-    <itemref idref="epub-23" />
     <itemref idref="epub-24" />
     <itemref idref="epub-25" />
     <itemref idref="epub-26" />
     <itemref idref="epub-27" />
-    <itemref idref="epub-31" />
+    <itemref idref="epub-28" />
     <itemref idref="epub-32" />
+    <itemref idref="epub-33" />
+    <itemref idref="epub-37" />
+    <itemref idref="epub-38" />
     <itemref idref="epub-35" />
     <itemref idref="epub-36" />
-    <itemref idref="epub-34" />
     <itemref idref="epub-12" />
-    <itemref idref="epub-29" />
-    <itemref idref="epub-28" />
     <itemref idref="epub-30" />
+    <itemref idref="epub-29" />
+    <itemref idref="epub-31" />
     <itemref idref="epub-0" />
     <itemref idref="epub-8" />
-    <itemref idref="epub-33" linear="no" />
+    <itemref idref="epub-34" linear="no" />
   </spine>
   <guide>
     <reference type="toc" title="Table of Contents" href="index.xhtml" />

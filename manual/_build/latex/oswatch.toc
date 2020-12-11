@@ -20,63 +20,68 @@
 \contentsline {section}{\numberline {10.1}Overview}{21}{section.10.1}
 \contentsline {section}{\numberline {10.2}Settings}{21}{section.10.2}
 \contentsline {section}{\numberline {10.3}References}{21}{section.10.3}
-\contentsline {chapter}{\numberline {11}Current Time Service}{23}{chapter.11}
-\contentsline {section}{\numberline {11.1}Requirements:}{23}{section.11.1}
-\contentsline {section}{\numberline {11.2}BLE Peripheral CTS sample for zephyr}{23}{section.11.2}
-\contentsline {section}{\numberline {11.3}Using bluez on linux to connect}{23}{section.11.3}
-\contentsline {section}{\numberline {11.4}Howto use Bluez on linux to set up a time service}{24}{section.11.4}
-\contentsline {section}{\numberline {11.5}Howto use Android to set up a time service}{24}{section.11.5}
-\contentsline {chapter}{\numberline {12}Firmware Over The Air (FOTA)}{25}{chapter.12}
-\contentsline {section}{\numberline {12.1}Serial Device Firmware Upgrade}{25}{section.12.1}
-\contentsline {section}{\numberline {12.2}Wireless Device Firmware Upgrade}{25}{section.12.2}
-\contentsline {subsection}{\numberline {12.2.1}Overview}{25}{subsection.12.2.1}
-\contentsline {section}{\numberline {12.3}MCUboot with zephyr}{25}{section.12.3}
-\contentsline {section}{\numberline {12.4}Partitions}{26}{section.12.4}
-\contentsline {subsection}{\numberline {12.4.1}Defining partitions for MCUboot}{26}{subsection.12.4.1}
-\contentsline {subsection}{\numberline {12.4.2}Remark}{26}{subsection.12.4.2}
-\contentsline {section}{\numberline {12.5}Signing an application}{26}{section.12.5}
-\contentsline {subsection}{\numberline {12.5.1}Generating a new keypair}{26}{subsection.12.5.1}
-\contentsline {subsection}{\numberline {12.5.2}Extracting the public key}{27}{subsection.12.5.2}
-\contentsline {subsection}{\numberline {12.5.3}Example}{27}{subsection.12.5.3}
-\contentsline {section}{\numberline {12.6}SMP Server Sample}{27}{section.12.6}
-\contentsline {subsection}{\numberline {12.6.1}Overview}{27}{subsection.12.6.1}
-\contentsline {subsection}{\numberline {12.6.2}Requirements}{27}{subsection.12.6.2}
-\contentsline {subsection}{\numberline {12.6.3}Building and Running}{27}{subsection.12.6.3}
-\contentsline {subsubsection}{Step 1: Build smp\_svr}{28}{subsubsection*.3}
-\contentsline {subsubsection}{Step 2: Sign the image}{28}{subsubsection*.4}
-\contentsline {subsubsection}{Step 3: Flash the smp\_svr image}{28}{subsubsection*.5}
-\contentsline {subsubsection}{Step 4: Run it!}{28}{subsubsection*.6}
-\contentsline {subsubsection}{Step 5: Device Firmware Upgrade}{28}{subsubsection*.7}
-\contentsline {paragraph}{List the images}{29}{paragraph*.8}
-\contentsline {paragraph}{Test the image}{29}{paragraph*.9}
-\contentsline {paragraph}{Reset remotely}{29}{paragraph*.10}
-\contentsline {chapter}{\numberline {13}Samples and Demos}{31}{chapter.13}
-\contentsline {section}{\numberline {13.1}Character frame buffer}{31}{section.13.1}
-\contentsline {subsection}{\numberline {13.1.1}Overview}{31}{subsection.13.1.1}
-\contentsline {subsection}{\numberline {13.1.2}Building and Running}{31}{subsection.13.1.2}
-\contentsline {section}{\numberline {13.2}Bluetooth: Peripheral UART}{31}{section.13.2}
-\contentsline {section}{\numberline {13.3}TODO}{31}{section.13.3}
-\contentsline {subsection}{\numberline {13.3.1}Overview}{32}{subsection.13.3.1}
-\contentsline {subsection}{\numberline {13.3.2}Debugging}{32}{subsection.13.3.2}
-\contentsline {subsection}{\numberline {13.3.3}Building and running}{32}{subsection.13.3.3}
-\contentsline {subsubsection}{Testing}{32}{subsubsection*.16}
-\contentsline {subsection}{\numberline {13.3.4}Dependencies}{32}{subsection.13.3.4}
-\contentsline {section}{\numberline {13.4}Bluetooth: NUS shell transport}{33}{section.13.4}
-\contentsline {section}{\numberline {13.5}TODO}{33}{section.13.5}
-\contentsline {subsection}{\numberline {13.5.1}Overview}{33}{subsection.13.5.1}
-\contentsline {subsection}{\numberline {13.5.2}Building and running}{33}{subsection.13.5.2}
-\contentsline {subsubsection}{Testing using the BLE Console}{33}{subsubsection*.17}
-\contentsline {subsection}{\numberline {13.5.3}Dependencies}{33}{subsection.13.5.3}
-\contentsline {section}{\numberline {13.6}LittlevGL Basic Sample}{34}{section.13.6}
-\contentsline {subsection}{\numberline {13.6.1}Overview}{34}{subsection.13.6.1}
-\contentsline {subsection}{\numberline {13.6.2}Requirements}{34}{subsection.13.6.2}
-\contentsline {subsection}{\numberline {13.6.3}Building and Running}{34}{subsection.13.6.3}
-\contentsline {subsection}{\numberline {13.6.4}References}{34}{subsection.13.6.4}
-\contentsline {chapter}{\numberline {14}Menuconfig}{35}{chapter.14}
-\contentsline {section}{\numberline {14.1}Zephyr is like linux}{35}{section.14.1}
-\contentsline {subsection}{\numberline {14.1.1}after saving :}{35}{subsection.14.1.1}
-\contentsline {chapter}{\numberline {15}Hacking stuff}{37}{chapter.15}
-\contentsline {section}{\numberline {15.1}debugging the ds\sphinxhyphen {}d6 smartwatch}{37}{section.15.1}
-\contentsline {section}{\numberline {15.2}howto generate pdf documents}{37}{section.15.2}
-\contentsline {chapter}{\numberline {16}About}{39}{chapter.16}
-\contentsline {section}{\numberline {16.1}What is already working :}{39}{section.16.1}
+\contentsline {chapter}{\numberline {11}Sensors}{23}{chapter.11}
+\contentsline {section}{\numberline {11.1}Overview}{23}{section.11.1}
+\contentsline {section}{\numberline {11.2}Settings}{23}{section.11.2}
+\contentsline {section}{\numberline {11.3}References}{23}{section.11.3}
+\contentsline {chapter}{\numberline {12}Current Time Service}{25}{chapter.12}
+\contentsline {section}{\numberline {12.1}Requirements:}{25}{section.12.1}
+\contentsline {section}{\numberline {12.2}BLE Peripheral CTS sample for zephyr}{25}{section.12.2}
+\contentsline {section}{\numberline {12.3}Using bluez on linux to connect}{25}{section.12.3}
+\contentsline {section}{\numberline {12.4}Howto use Bluez on linux to set up a time service}{26}{section.12.4}
+\contentsline {section}{\numberline {12.5}Howto use Android to set up a time service}{26}{section.12.5}
+\contentsline {chapter}{\numberline {13}Firmware Over The Air (FOTA)}{27}{chapter.13}
+\contentsline {section}{\numberline {13.1}Serial Device Firmware Upgrade}{27}{section.13.1}
+\contentsline {section}{\numberline {13.2}Wireless Device Firmware Upgrade}{27}{section.13.2}
+\contentsline {subsection}{\numberline {13.2.1}Overview}{27}{subsection.13.2.1}
+\contentsline {section}{\numberline {13.3}MCUboot with zephyr}{27}{section.13.3}
+\contentsline {section}{\numberline {13.4}Partitions}{28}{section.13.4}
+\contentsline {subsection}{\numberline {13.4.1}Defining partitions for MCUboot}{28}{subsection.13.4.1}
+\contentsline {subsection}{\numberline {13.4.2}Remark}{28}{subsection.13.4.2}
+\contentsline {section}{\numberline {13.5}Signing an application}{28}{section.13.5}
+\contentsline {subsection}{\numberline {13.5.1}Generating a new keypair}{28}{subsection.13.5.1}
+\contentsline {subsection}{\numberline {13.5.2}Extracting the public key}{29}{subsection.13.5.2}
+\contentsline {subsection}{\numberline {13.5.3}Example}{29}{subsection.13.5.3}
+\contentsline {section}{\numberline {13.6}SMP Server Sample}{29}{section.13.6}
+\contentsline {subsection}{\numberline {13.6.1}Overview}{29}{subsection.13.6.1}
+\contentsline {subsection}{\numberline {13.6.2}Requirements}{29}{subsection.13.6.2}
+\contentsline {subsection}{\numberline {13.6.3}Building and Running}{29}{subsection.13.6.3}
+\contentsline {subsubsection}{Step 1: Build smp\_svr}{30}{subsubsection*.3}
+\contentsline {subsubsection}{Step 2: Sign the image}{30}{subsubsection*.4}
+\contentsline {subsubsection}{Step 3: Flash the smp\_svr image}{30}{subsubsection*.5}
+\contentsline {subsubsection}{Step 4: Run it!}{30}{subsubsection*.6}
+\contentsline {subsubsection}{Step 5: Device Firmware Upgrade}{30}{subsubsection*.7}
+\contentsline {paragraph}{List the images}{31}{paragraph*.8}
+\contentsline {paragraph}{Test the image}{31}{paragraph*.9}
+\contentsline {paragraph}{Reset remotely}{31}{paragraph*.10}
+\contentsline {chapter}{\numberline {14}Samples and Demos}{33}{chapter.14}
+\contentsline {section}{\numberline {14.1}Character frame buffer}{33}{section.14.1}
+\contentsline {subsection}{\numberline {14.1.1}Overview}{33}{subsection.14.1.1}
+\contentsline {subsection}{\numberline {14.1.2}Building and Running}{33}{subsection.14.1.2}
+\contentsline {section}{\numberline {14.2}Bluetooth: Peripheral UART}{33}{section.14.2}
+\contentsline {section}{\numberline {14.3}TODO}{33}{section.14.3}
+\contentsline {subsection}{\numberline {14.3.1}Overview}{34}{subsection.14.3.1}
+\contentsline {subsection}{\numberline {14.3.2}Debugging}{34}{subsection.14.3.2}
+\contentsline {subsection}{\numberline {14.3.3}Building and running}{34}{subsection.14.3.3}
+\contentsline {subsubsection}{Testing}{34}{subsubsection*.16}
+\contentsline {subsection}{\numberline {14.3.4}Dependencies}{34}{subsection.14.3.4}
+\contentsline {section}{\numberline {14.4}Bluetooth: NUS shell transport}{35}{section.14.4}
+\contentsline {section}{\numberline {14.5}TODO}{35}{section.14.5}
+\contentsline {subsection}{\numberline {14.5.1}Overview}{35}{subsection.14.5.1}
+\contentsline {subsection}{\numberline {14.5.2}Building and running}{35}{subsection.14.5.2}
+\contentsline {subsubsection}{Testing using the BLE Console}{35}{subsubsection*.17}
+\contentsline {subsection}{\numberline {14.5.3}Dependencies}{35}{subsection.14.5.3}
+\contentsline {section}{\numberline {14.6}LittlevGL Basic Sample}{36}{section.14.6}
+\contentsline {subsection}{\numberline {14.6.1}Overview}{36}{subsection.14.6.1}
+\contentsline {subsection}{\numberline {14.6.2}Requirements}{36}{subsection.14.6.2}
+\contentsline {subsection}{\numberline {14.6.3}Building and Running}{36}{subsection.14.6.3}
+\contentsline {subsection}{\numberline {14.6.4}References}{36}{subsection.14.6.4}
+\contentsline {section}{\numberline {14.7}Lightsensor}{36}{section.14.7}
+\contentsline {chapter}{\numberline {15}Menuconfig}{37}{chapter.15}
+\contentsline {section}{\numberline {15.1}Zephyr is like linux}{37}{section.15.1}
+\contentsline {subsection}{\numberline {15.1.1}after saving :}{37}{subsection.15.1.1}
+\contentsline {chapter}{\numberline {16}Hacking stuff}{39}{chapter.16}
+\contentsline {section}{\numberline {16.1}debugging the ds\sphinxhyphen {}d6 smartwatch}{39}{section.16.1}
+\contentsline {section}{\numberline {16.2}howto generate pdf documents}{39}{section.16.2}
+\contentsline {chapter}{\numberline {17}About}{41}{chapter.17}
+\contentsline {section}{\numberline {17.1}What is already working :}{41}{section.17.1}

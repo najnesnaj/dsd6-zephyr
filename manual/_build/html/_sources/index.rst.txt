@@ -11,6 +11,7 @@
    bluetooth 
    display
    lvgl
+   sensor
    current-time.rst
    fota/fota.rst
    samples/index.rst

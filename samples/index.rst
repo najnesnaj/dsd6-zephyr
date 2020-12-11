@@ -14,6 +14,7 @@ This is just a collection of them.
    peripheral_uart/*
    shell_bt_nus/*
    lvgl2/*
+   max44009/*
 
 .. comment
    To add a new sample document, please use the template available under
